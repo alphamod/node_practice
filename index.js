@@ -27,7 +27,7 @@ app.post('/login', (req, res)=>{
     console.log({body:req.body})
     const {email, password} = req.body;  // ====> const email = req.body.email; const password = req.body.password;
     console.log({email, password});
-    if(email === 'hrone@gmail.com' && password === '123456'){
+    if(email === 'admin@gmail.com' && password === '123456'){
         res.status(200).json({message:"login success"}); // status 200 - 299 ====> success ; status 400 - 499 ====> error
     } else{
         res.status(401).json({message:"login failed. Email or password is incorrect"}); // status 401 ====> unauthorized
